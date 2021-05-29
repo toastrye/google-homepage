@@ -8,12 +8,12 @@
   </head>
   <body>
     <style>
-      img { /* position of google image*/
+      img { /*google image*/
         display: block;
         margin: auto;
         margin-top:16%;
       }
-      input { /* size and position of search bar */
+      input { /*search bar */
         display: block;
         margin: auto;
         margin-top: 5%;
@@ -24,7 +24,7 @@
         border-style: solid;
         border-color: rgb(233, 233, 233);
       }
-      button { /* will this become a problem when i implement other buttons, becuase i don't have "button" set as a class for a "div"*/
+      button { 
         border: none;
         padding: 10px 16px;
         border-radius: 4px; 
@@ -40,60 +40,45 @@
         cursor: pointer;
         font-size: 14px;
       }
-      .text-center { /* finally centered the damn buttons*/
+      .text-center {
         text-align: center;
       }
+      .nav-bar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
       li {
-        color: #000;
         display: inline-block;
-        padding-inline-end: 15px;
+        list-style-type: none;
+        padding-inline-start: 10px;
         opacity: 0.75;  
-      }
-      .nav-left {
-        display:inline-block;
-        color: #000; 
-      }
-      .nav-right {
-        display:inline-block;
-        position:absolute;
-        right: 0;
-        padding: 2px;
         color: #000;
       }
-      .footer { /* this is good, just fix the other classes to adjust text positions*/
-        position: absolute;
+      .footer { 
         display: inline-block;
+        position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
         line-height: 8px;
         background-color: #f2f2f2;
         border-top: 1px solid #e4e4e4;
-        color: #000;
-      }
-      .footer-left { /* adjustments for footer text left*/
-        text-align: start;
-      }
-      .footer-right { /* adjustments for footer text right*/
-        text-align: end;
       }
     </style>
   </body>              
   <body>
-    <div class="nav-left"> 
-      <ul> 
-        <li><a href="#">About</a></li>
-        <li><a href="#">Store</a></li>                        
-      </ul>
-    </div>
-     <div class="nav-right"> <!--styling should be seperate from html-->
-      <ul>
-        <li><a href="#">Gmail</a></li> 
-        <li><a href="#">Images</a></li>
-        <li><a href="#">Apps</a></li> <!-- change this to a clickable app icon-->
-        <li><a href="#">Profile</a></li> <!-- change to a clickable profile image, or a blue square login button-->
-      </ul>
-    </div>
+      <div class="nav-bar"> 
+        <ul> 
+          <li><a href="#">About</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Gmail</a></li> 
+          <li><a href="#">Images</a></li>
+          <li><a href="#">Apps</a></li> 
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </div>
     <div id="google-logo">
       <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">               
     </div> 
@@ -106,19 +91,15 @@
       <button><a href="#">Google Search</a></button>
       <button><a href="#">I'm Feeling Lucky</a></button>   
     </div>
-    <div id="footer-left" class="footer footer-left">
+    <div class="footer">
       <ul>
         <li><a href="#">Advertising</a></li>
         <li><a href="#">Business</a></li>
         <li><a href="#">How Search works</a></li>
-      </ul>
-    </div> <!--
-    <div id="footer-right" class=""> 
-      <ul>
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">Settings</a></li>
       </ul>
-    </div> -->
+    </div> 
   </body>        
 </html>
