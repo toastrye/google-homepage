@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-            <meta charset="utf-8">
-                <title>Google</title>
-                <meta name="discription" content="Search the world's information, including webpages, images, videos and more.">
-                <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- how do i use this to bring in the maginifying glass icon as well as the microhpone icon for the search bar-->
-                <style>
-                        img { /* position of google image*/      
-                                display: block;
-                                margin-left: auto;
-                                margin-right: auto;
-                                margin-top:20%;
-                        }
-                        input { /* size and position of search bar */
-                                display: block;
-                                margin-left: auto;
-                                margin-right: auto;
-                                margin-top: 4%;
-                                margin-bottom: 1%;
-                                width: 560px;
-                                height: 40px;
-                                border-radius: 50px;
-                                border-color: rgb(233, 233, 233);
-                                border-style: solid;
-                        }
-                        button { /* will this become a problem when i implement other buttons, becuase i don't have "button" set as a class for a "div"*/
-                             background-color: rgb(241, 241, 241);
-                             border: none;
-                             color: rgb(87, 87, 87);
-                             padding: 10px 16px;
-                             font-size: 14px;
-                             border-radius: 4px; /* rounds out edges of buttons*/
-                             margin: 3px; /* space between buttons*/   
-                             margin-top: 3%;   
-                        }
-                        a {
-                                color: inherit;
-                                text-decoration: none;
-                        }
-                        .text-center { /* finally centered the damn buttons*/
-                                text-align: center;
-                        }
-                        li {
-                                display: inline;
-                                float: top;
-                                margin: 5px;
-                                font-size: 14px;
-                                font-family: unset; /* find out what this should be*/
-                                color: rgb(46, 46, 46);
-                        }
-                        .footer {
-                                position: fixed;
-                                left: 0;
-                                bottom: 0;
-                                width: 100%;
-                                background-color: #f2f2f2;
-                                border-top: 1px solid #e4e4e4;
-                                color: #5f6368;
-                                font-family: Arial, sans-serif;
-                                font-size: 14px;
-                                line-height: 40px;
-                                padding-left: 27px;
-                        }
-                        </style>
-        </head>
-        <body>
-                <div id="topnav-left"> 
-                        <ul> 
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Store</a></li>                        
-                        </ul>
-                </div>
-                <div id="topnav-right" style="position: fixed; right: 0; padding-right: 27px; margin-top: -2.5%"> <!--styling should be seperate from html-->
-                        <ul>
-                                <li><a href="#">Gmail</a></li> 
-                                <li><a href="#">Images</a></li>
-                                <li><a href="#">Apps</a></li> <!-- change this to a clickable app icon-->
-                                <li><a href="#">Profile</a></li> <!-- change to a clickable profile image, or a blue square login button-->
-                        </ul>
-                </div>
-                <div id="google-logo" class="">
-                        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">               
-                </div> 
-                <div id="search-bar">
-                        <form>
-                                <input type="text" id="search bar" name="search"> 
-                        </form>
-                </div>
-                <div id="search-lucky" class="text-center">
-                     <button><a href="#">Google Search</a></button>
-                     <button><a href="#">I'm Feeling Lucky</a></button>   
-                </div>
-                <div id="bottom-nav" class="footer">
-                        <ul>
-                                <li><a href="#">Advertising</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">How Search works</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Terms</a></li>
-                        </ul>
-                </div>
-
-
-                </div>       
-        </body>        
+  <head>
+    <meta charset="utf-8">
+    <meta name="discription" content="Search the world's information, including webpages, images, videos and more.">
+    <title>Google</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- how do i use this to bring in the maginifying glass icon as well as the microhpone icon for the search bar-->
+  </head>
+  <body>
+    <style>
+      img { /* position of google image*/
+        display: block;
+        margin: auto;
+        margin-top:16%;
+      }
+      input { /* size and position of search bar */
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 1%;
+        width: 475px;
+        height: 40px;
+        border-radius: 50px;
+        border-style: solid;
+        border-color: rgb(233, 233, 233);
+      }
+      button { /* will this become a problem when i implement other buttons, becuase i don't have "button" set as a class for a "div"*/
+        border: none;
+        padding: 10px 16px;
+        border-radius: 4px; 
+        margin: 3px; /* space between buttons*/   
+        margin-top: 3%;
+        background-color: rgb(241, 241, 241);
+        color: rgb(87, 87, 87);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-family: arial,sans-serif;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .text-center { /* finally centered the damn buttons*/
+        text-align: center;
+      }
+      li {
+        color: #000;
+        display: inline-block;
+        padding-inline-end: 15px;
+        opacity: 0.75;  
+      }
+      .nav-left {
+        display:inline-block;
+        color: #000; 
+      }
+      .nav-right {
+        display:inline-block;
+        position:absolute;
+        right: 0;
+        padding: 2px;
+        color: #000;
+      }
+      .footer { /* this is good, just fix the other classes to adjust text positions*/
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        line-height: 8px;
+        background-color: #f2f2f2;
+        border-top: 1px solid #e4e4e4;
+        color: #000;
+      }
+      .footer-left { /* adjustments for footer text left*/
+        text-align: start;
+      }
+      .footer-right { /* adjustments for footer text right*/
+        text-align: end;
+      }
+    </style>
+  </body>              
+  <body>
+    <div class="nav-left"> 
+      <ul> 
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>                        
+      </ul>
+    </div>
+     <div class="nav-right"> <!--styling should be seperate from html-->
+      <ul>
+        <li><a href="#">Gmail</a></li> 
+        <li><a href="#">Images</a></li>
+        <li><a href="#">Apps</a></li> <!-- change this to a clickable app icon-->
+        <li><a href="#">Profile</a></li> <!-- change to a clickable profile image, or a blue square login button-->
+      </ul>
+    </div>
+    <div id="google-logo">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">               
+    </div> 
+    <div id="search-bar">
+      <form>
+        <input type="text" id="search bar" name="search"> 
+      </form>
+    </div>
+    <div class="text-center">
+      <button><a href="#">Google Search</a></button>
+      <button><a href="#">I'm Feeling Lucky</a></button>   
+    </div>
+    <div id="footer-left" class="footer footer-left">
+      <ul>
+        <li><a href="#">Advertising</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">How Search works</a></li>
+      </ul>
+    </div> <!--
+    <div id="footer-right" class=""> 
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div> -->
+  </body>        
 </html>
