@@ -25,6 +25,7 @@
         border-radius: 50px;
         border-style: solid;
         border-color: rgb(233, 233, 233);
+        outline: none;
       }
       a {
         color: inherit;
@@ -42,12 +43,25 @@
         background-color: rgb(241, 241, 241);
         color: rgb(87, 87, 87);
         font-size: 14px;
+        cursor: inherit;
+      }
+      .in-button {
+        border: 1px solid #4285f4;
+        padding: 6px 10px 6px 10px;
+        border-radius: 2px;
+        background:#4285f4;
+        color: #f2f2f2;
+        font-size: 13px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        
       }
       .text-center {
         text-align: center;
       }
       .nav-bar {
-        position: fixed;
+        position: relative;
         top: 5px;
         width: 100%;
         min-width: inherit;
@@ -64,21 +78,18 @@
         border-top: 1px solid #e4e4e4;
       }
       .text-left {
-        position: fixed;
         float: left;
-        margin-left: -20px; /*why is this value and .text-right value different?*/
-      
       }
       .text-right {
         float: right;
-        margin-right: 50px;
-        white-space: nowrap;
-        
+        right: 0;
+        margin-right: 60px;     
       }
       li {
         display: inline-block;
         list-style-type: none;
         padding-inline-start: 10px;
+        margin-left: -30;
         opacity: 0.75;  
         color: #000;
       }
@@ -97,8 +108,8 @@
         <ul class="text-right">
           <li><a href="#">Gmail</a></li> 
           <li><a href="#">Images</a></li>
-          <li><a href="#">Apps</a></li> 
-          <li><a href="#">Profile</a></li>
+          <li><a href="#" class="material-icons">apps</a></li> 
+          <li><a href="#" class="in-button">Sign in</a></li>
         </ul>
       </div>
     <div id="google-logo">
