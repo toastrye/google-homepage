@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="discription" content="Search the world's information, including webpages, images, videos and more.">
     <title>Google</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- how do i use this to bring in the maginifying glass icon as well as the microhpone icon for the search bar-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <style>
@@ -23,15 +23,32 @@
         width: 475px;
         height: 40px;
         border-radius: 50px;
+        border-width: 2px;
         border-style: solid;
         border-color: rgb(233, 233, 233);
         outline: none;
+      }
+      .search-icon-left{
+        display: inline;
+        float: left;
+        margin-top: -20px;
+        margin-left: 10px;
+        cursor: default;
+        opacity: 0.25;      
+      }
+      .search-icon-right{
+        display: inline;
+        float: right;
+        margin-top: -20px;
+        margin-right: 10px;
+        cursor: pointer;
+        opacity: 0.25;
       }
       input {
         display: inherit;
         margin: auto;
         margin-top: 10px;
-        width: 85%;
+        width: 80%;
         font: 16px arial,sans-serif;
         outline: none;
         border: none;
@@ -135,7 +152,13 @@
       <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">               
     </div> 
     <div class="search-bar">
-      <input class="input-field" type="text">
+      <input type="text">
+        <div class="search-icon-left">
+          <span class="material-icons">search</span>
+        </div> 
+        <div class="search-icon-right">
+          <span class="material-icons">mic</span>
+        </div>
     </div>
     <div class="text-center">
       <button><a href="#">Google Search</a></button>
