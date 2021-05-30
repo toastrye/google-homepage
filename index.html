@@ -16,7 +16,7 @@
         margin: auto;
         margin-top:165px;
       }
-      input { /*search bar */
+      .search-bar {
         display: inherit;
         margin: auto;
         margin-top: 20px;
@@ -26,6 +26,15 @@
         border-style: solid;
         border-color: rgb(233, 233, 233);
         outline: none;
+      }
+      input {
+        display: inherit;
+        margin: auto;
+        margin-top: 10px;
+        width: 85%;
+        font: 16px arial,sans-serif;
+        outline: none;
+        border: none;
       }
       a {
         color: inherit;
@@ -46,23 +55,22 @@
         cursor: inherit;
       }
       .in-button {
-        border: 1px solid #4285f4;
+        border: 1px solid #0056e0;
         padding: 6px 10px 6px 10px;
         border-radius: 2px;
-        background:#4285f4;
+        background: #0056e0;
         color: #f2f2f2;
         font-size: 13px;
         font-weight: bold;
         outline: none;
         cursor: pointer;
-        
       }
       .text-center {
         text-align: center;
       }
       .nav-bar {
         position: relative;
-        top: 5px;
+        top: 0px;
         width: 100%;
         min-width: inherit;
       }
@@ -77,13 +85,24 @@
         background-color: #f2f2f2;
         border-top: 1px solid #e4e4e4;
       }
-      .text-left {
+      .text-left { /* top left and bottom left have ~10px difference, why?*/
         float: left;
+        margin-left: -25px;
       }
-      .text-right {
+      .text-topright {
+        position: relative;
         float: right;
-        right: 0;
-        margin-right: 60px;     
+        margin-right: 25px;
+        top: -10px;
+      }
+      .text-botright {
+        position: relative;
+        float: right;
+        margin-right: 25px;
+      }
+      .app {
+        position: relative;
+        top: 8px;
       }
       li {
         display: inline-block;
@@ -94,7 +113,7 @@
         color: #000;
       }
       .scroll {
-        padding: 4px;
+        padding: 1px;
         overflow: auto;
       }
     </style>
@@ -105,20 +124,18 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Store</a></li>
         </ul>
-        <ul class="text-right">
+        <ul class="text-topright">
           <li><a href="#">Gmail</a></li> 
           <li><a href="#">Images</a></li>
-          <li><a href="#" class="material-icons">apps</a></li> 
+          <li><a href="#" class="material-icons app">apps</a></li> 
           <li><a href="#" class="in-button">Sign in</a></li>
         </ul>
       </div>
     <div id="google-logo">
       <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">               
     </div> 
-    <div id="search-bar">
-      <form>
-        <input type="text" id="search bar" name="search"> 
-      </form>
+    <div class="search-bar">
+      <input class="input-field" type="text">
     </div>
     <div class="text-center">
       <button><a href="#">Google Search</a></button>
@@ -130,7 +147,7 @@
         <li><a href="#">Business</a></li>
         <li><a href="#">How Search works</a></li>
       </ul>
-      <ul class="text-right">
+      <ul class="text-botright">
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">Settings</a></li>
