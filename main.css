@@ -92,7 +92,7 @@ button {
   background-color: #f2f2f2;
   border-top: 1px solid #e4e4e4;
 }
-.text-left { /* top nav link elements are further from sides of page than footer elements, why?*/
+.text-left {
   float: left;
   margin-left: -25px;
   
