@@ -95,6 +95,8 @@ button {
 .text-left { /* top nav link elements are further from sides of page than footer elements, why?*/
   float: left;
   margin-left: -25px;
+  
+
 }
 .text-topright {
   position: relative;
