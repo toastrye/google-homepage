@@ -1,4 +1,2 @@
 
-The Google Homepage mini-project is a decunstruction and rebuld of an existing webpage.
-Goal: experiment with how elements get placed and how they are syled, alighned.
-HTML and CSS
+The Google Homepage mini-project is a decunstruction and rebuild of an existing webpage. The goal being to experiment with how elements are placed and styled.

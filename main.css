@@ -1,7 +1,7 @@
 body { 
   min-width: 980px;    
 }
-img {
+img { 
   display: block;
   margin: auto;
   margin-top:165px;
@@ -54,7 +54,7 @@ button {
   border: none;
   padding: 10px 16px;
   border-radius: 4px; 
-  margin: 3px;
+  margin: 3px; /* space between buttons*/   
   margin-top: 25px;
   background-color: rgb(241, 241, 241);
   color: rgb(87, 87, 87);
